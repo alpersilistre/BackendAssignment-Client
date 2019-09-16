@@ -1,5 +1,11 @@
-# angular-6-registration-login-example
+# BackendAssignment-Client
 
 Clay Client app for Web API
 
-Based on the http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial tutorial.
+Initial project source code is based on the https://github.com/cornflourblue/angular-6-registration-login-example repo.
+
+It has been modified for the demo.
+
+# How to start the client
+1) npm install on the project main folder
+2) npm start
