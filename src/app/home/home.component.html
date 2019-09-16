@@ -1,0 +1,25 @@
+﻿<h1>Hi</h1>
+<p>You're logged in!!</p>
+<div *ngIf="isAdmin">
+    <h3>All registered users:</h3>
+    <ul>
+        <li *ngFor="let user of users">
+            {{user.firstName}} {{user.lastName}}
+        </li>
+    </ul>
+    <h3>All events:</h3>
+    <ul>
+        <li *ngFor="let event of events">{{ event.detail }}</li>
+    </ul>
+</div>
+<div *ngIf="!isAdmin && locks">
+    <h3>User's company locks:</h3>
+    <ul>
+        <li *ngFor="let lock of locks">
+            {{lock.name}}
+            <a *ngIf="lock.isLocked" (click)="locking(lock.id, false)"> is Locked - <span style="color: red">Unlock</span></a>
+            <a *ngIf="!lock.isLocked" (click)="locking(lock.id, true)"> is Unlocked - <span style="color: red">Lock</span></a>
+        </li>
+    </ul>
+</div>
+<p><a [routerLink]="['/login']">Logout</a></p>
